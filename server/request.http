@@ -1,0 +1,58 @@
+
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username" : "truongpro",
+  "password" : "truongpro1"
+}
+
+### 
+
+POST http://localhost:5000/api/auth/login
+Content-Type:  application/json
+
+{
+  "username": "Hanna",
+  "password": "hanna1"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjNGE1YzM3YTVlMzMwNWM5NjJhYTIiLCJpYXQiOjE2NTU0NTg0Njd9.OnqHA2ALdZawNHL7G--vfiXXauTQoASrkzZMYbMWeco
+
+{
+  "title": "First of ly",
+  "description": "hahahahh",
+  "url": "oracle.com",
+  "status": "Learning"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjNGE1YzM3YTVlMzMwNWM5NjJhYTIiLCJpYXQiOjE2NTU0NTg0Njd9.OnqHA2ALdZawNHL7G--vfiXXauTQoASrkzZMYbMWeco
+
+###
+
+PUT http://localhost:5000/api/posts/62b17a3c36eaaea02aa74ba1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjNGE1YzM3YTVlMzMwNWM5NjJhYTIiLCJpYXQiOjE2NTU0NTg0Njd9.OnqHA2ALdZawNHL7G--vfiXXauTQoASrkzZMYbMWeco
+
+
+{
+  "title": "my first update",
+  "description": "vuejs",
+  "url": "vue.org",
+  "status":  "Learning"
+} 
+
+###
+
+DELETE  http://localhost:5000/api/posts/62b17a3c36eaaea02aa74ba1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjNGE1YzM3YTVlMzMwNWM5NjJhYTIiLCJpYXQiOjE2NTU0NTg0Njd9.OnqHA2ALdZawNHL7G--vfiXXauTQoASrkzZMYbMWeco
+
+
